@@ -1,90 +1,118 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="ja">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Progate</title>
-  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#0b1220" />
+  <title>つく×よむ - Tsuku×Yomu</title>
+  <style>
+    :root{
+      --bg:#08101a;
+      --card:#0f1b2a;
+      --accent:#7db9ff;
+      --muted:#9fb4c8;
+      --moon:#f6f8ff;
+      --glass: rgba(255,255,255,0.04);
+      font-family: "Hiragino Kaku Gothic ProN", "Noto Sans JP", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    html,body{height:100%;margin:0;background:linear-gradient(180deg,var(--bg) 0%, #07121a 60%, #021018 100%);color:var(--moon);-webkit-font-smoothing:antialiased;}
+    .wrap{min-height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:28px;box-sizing:border-box;}
+    .card{width:100%;max-width:920px;background:linear-gradient(180deg,var(--card), #071827);border-radius:16px;padding:28px;box-shadow:0 6px 30px rgba(2,8,15,0.7);backdrop-filter: blur(6px);}
+    header{display:flex;align-items:center;gap:16px;}
+    .logo{
+      width:64px;height:64px;border-radius:12px;display:flex;align-items:center;justify-content:center;
+      background:linear-gradient(135deg,#2b4d6f,#113a59);
+      box-shadow:inset 0 -6px 18px rgba(0,0,0,0.25), 0 6px 18px rgba(10,20,30,0.6);
+      font-weight:700;color:var(--moon);font-size:22px;
+    }
+    h1{margin:0;font-size:22px;letter-spacing:0.6px;}
+    p.lead{color:var(--muted);margin-top:10px;margin-bottom:18px;}
+    .grid{display:grid;grid-template-columns:1fr 340px;gap:20px;}
+    .main{min-height:200px;}
+    .section{background:var(--glass);padding:16px;border-radius:12px;margin-bottom:12px;}
+    .btn{
+      display:inline-block;padding:10px 14px;border-radius:10px;background:linear-gradient(180deg,var(--accent),#5aa0ff);color:#052235;font-weight:700;text-decoration:none;
+      box-shadow:0 6px 14px rgba(37,120,210,0.22);
+    }
+    .muted{color:var(--muted);font-size:14px;}
+    footer{margin-top:18px;color:var(--muted);font-size:13px;text-align:center;}
+    .meta{font-size:13px;color:var(--muted);margin-top:8px;}
+    ul.features{list-style:none;padding:0;margin:8px 0 0 0;display:grid;gap:8px;}
+    ul.features li{padding:8px 10px;border-radius:10px;background:rgba(255,255,255,0.02);display:flex;align-items:center;gap:10px;}
+    .badge{width:36px;height:36px;border-radius:8px;background:rgba(255,255,255,0.03);display:flex;align-items:center;justify-content:center;color:var(--accent);font-weight:700;}
+    @media (max-width:880px){
+      .grid{grid-template-columns:1fr; }
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <div class="container">
-      <div class="header-left">
-        <img class="logo" src="https://prog-8.com/images/html/advanced/main_logo.png">
+  <div class="wrap">
+    <div class="card" role="main" aria-labelledby="site-title">
+      <header>
+        <div class="logo">つく×よむ</div>
+        <div>
+          <h1 id="site-title">短歌アプリ「つく×よむ」公式情報ページ（テスト）</h1>
+          <p class="lead">月夜のようにやわらかな、つくる・よむ・出会うを届ける短歌アプリ。</p>
+          <div class="meta">このページはプライバシーポリシー等を掲載するためのテストページです。</div>
+        </div>
+      </header>
+
+      <div class="grid" style="margin-top:18px;">
+        <div class="main">
+          <section class="section" aria-labelledby="about">
+            <h2 id="about">概要</h2>
+            <p class="muted">「つく×よむ」は日替わりのお題で短歌を投稿し、匿名で投票・順位を決定する参加型の文芸アプリです。投稿は1日1回まで。投票はお題発表から24時間後に開始します。</p>
+          </section>
+
+          <section class="section" aria-labelledby="privacy">
+            <h2 id="privacy">プライバシー</h2>
+            <p class="muted">本サービスは広告（Google AdMob）を利用します。利用状況解析には Google Analytics for Firebase を用います。個人を特定する情報は広告配信のために直接収集しません。<br>
+            詳細は下記の「プライバシーポリシー」リンクからご確認ください。</p>
+            <p style="margin-top:12px;">
+              <!-- リンク先は実際の GitHub Pages 内のプライバシーURLに置き換えてください -->
+              <a class="btn" href="./privacy.html">プライバシーポリシーを見る</a>
+            </p>
+          </section>
+
+          <section class="section" aria-labelledby="accounts">
+            <h2 id="accounts">テストアカウント</h2>
+            <p class="muted">App Review 用のテストアカウントを用意しています（review01 ～ review10 / 共通パスワード: pass1234）。審査用の説明はApp Store ConnectのNotes欄をご参照ください。</p>
+          </section>
+
+          <section class="section" aria-labelledby="contact">
+            <h2 id="contact">お問い合わせ</h2>
+            <p class="muted">ご質問やプライバシー関連のご依頼は下記フォームよりお問い合わせください。</p>
+            <p style="margin-top:10px;"><a class="btn" href="https://xxx" target="_blank" rel="noopener">お問い合わせフォームへ</a></p>
+          </section>
+        </div>
+
+        <aside style="align-self:start;">
+          <div class="section">
+            <h3>主な機能</h3>
+            <ul class="features" aria-hidden="false">
+              <li><div class="badge">1</div><div><strong>日替わりお題</strong><div class="muted">7:00 / 19:00 に公開</div></div></li>
+              <li><div class="badge">2</div><div><strong>投稿</strong><div class="muted">1日1回まで</div></div></li>
+              <li><div class="badge">3</div><div><strong>匿名投票</strong><div class="muted">作者非公開で公平に評価</div></div></li>
+              <li><div class="badge">4</div><div><strong>結果発表</strong><div class="muted">投票終了後に順位＆作者公開</div></div></li>
+            </ul>
+          </div>
+
+          <div class="section" style="margin-top:14px;">
+            <h3>リリース情報</h3>
+            <p class="muted">現在：ファーストリリース準備中。<br>今後の機能：コメント、プロフィール、ランキング詳細など。</p>
+          </div>
+
+          <div class="section" style="margin-top:14px;text-align:center;">
+            <div style="font-size:12px;color:var(--muted)">リポジトリ</div>
+            <div style="margin-top:8px"><a class="btn" href="https://github.com/YOUR_USERNAME/tsukuyomu-web" target="_blank" rel="noopener">GitHub (tsukuyomu-web)</a></div>
+          </div>
+        </aside>
       </div>
-      <span class="fa fa-bars menu-icon"></span>
-      <div class="header-right">
-        <a href="#">レッスン</a>
-        <a href="#">新規登録</a>
-        <a href="#" class="login">ログイン</a>
-      </div>
-    </div>
-  </header>
-  <div class="top-wrapper">
-    <div class="container">
-      <h1>LEARN TO CODE.<br>LEARN TO BE CREATIVE.</h1>
-      <p>Progateはオンラインプログラミング学習サービスです。<br>初心者にもやさしいスライドとレッスンで、ウェブサービスを作りながらプログラミングを学んでいきましょう。</p>
-      <div class="btn-wrapper">
-        <a href="#" class="btn signup">新規登録はこちら</a>
-        <p>or</p>
-        <a href="#" class="btn facebook"><span class="fa fa-facebook"></span>Facebookで登録</a>
-        <a href="#" class="btn twitter"><span class="fa fa-twitter"></span>Twitterで登録</a>
-      </div>
+
+      <footer>
+        <div>© 2025 つく×よむ</div>
+      </footer>
     </div>
   </div>
-  <div class="lesson-wrapper">
-    <div class="container">
-      <div class="heading">
-        <h2>Learn Where to Get Started!</h2>
-      </div>
-      <div class="lessons">
-        <div class="lesson">
-          <div class="lesson-icon">
-            <img src="https://prog-8.com/images/html/advanced/html.png">
-            <p>HTML & CSS</p>
-          </div>
-          <p class="text-contents">ウェブページの作成に使用される言語です。HTMLとCSSを組み合わせることで、静的なページを作り上げることができます。</p>
-        </div>
-        <div class="lesson">
-          <div class="lesson-icon">
-            <img src="https://prog-8.com/images/html/advanced/jQuery.png">
-            <p>jQuery</p>
-          </div>
-          <p class="text-contents">素敵な動きを手軽に実装できるJavaScriptライブラリです。 アニメーション効果をつけたり、Ajax（エイジャックス）を使って外部ファイルを読み込んだりと色々なことができます。</p>
-        </div>
-        <div class="lesson">
-          <div class="lesson-icon">
-            <img src="https://prog-8.com/images/html/advanced/ruby.png">
-            <p>Ruby</p>
-          </div>
-          <p class="text-contents">オープンソースの動的なプログラミング言語で、 シンプルさと高い生産性を備えています。大きなWebアプリケーションから小さな日用ツールまで、さまざまなソフトウェアを作ることができます。</p>
-        </div>
-        <div class="lesson">
-          <div class="lesson-icon">
-            <img src="https://prog-8.com/images/html/advanced/php.png">
-            <p>PHP</p>
-          </div>
-          <p class="text-contents">HTMLだけではページの内容を変えることはできません。PHPはHTMLにプログラムを埋め込み、それを可能にします。</p>
-        </div>
-      </div>
-      <div class="clear"></div>
-    </div>
-  </div>
-  <div class="message-wrapper">
-    <div class="container">
-      <div class="heading">
-        <h2>さぁ、あなたもProgateでプログラミングを学んでみませんか?</h2>
-        <h3>Let's learn to code, learn to be creative!</h3>
-      </div>
-      <span class="btn message">さっそく開発する</span>
-    </div>
-  </div>
-  <footer>
-    <div class="container">
-      <img src="https://prog-8.com/images/html/advanced/footer_logo.png">
-      <p>Learn to Code, Learn to be Creative.</p>
-    </div>
-  </footer>
 </body>
 </html>
