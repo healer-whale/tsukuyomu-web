@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<!--
+  お知らせページ
+  新しいお知らせを追加するときは、下の <article class="news-item"> ブロックを
+  1つコピーして news-list の先頭（いちばん上）に貼り付け、日付・カテゴリ・本文を書き換えてください。
+  カテゴリ（badge）の種類:
+    <span class="badge">お知らせ</span>                （既定・藤色）
+    <span class="badge badge--update">アップデート</span> （緑）
+    <span class="badge badge--bug">不具合</span>          （赤）
+    <span class="badge badge--maintenance">メンテナンス</span>（黄土色）
+-->
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>お知らせ｜つく×よむ</title>
+  <meta name="description" content="短歌アプリ『つく×よむ』のお知らせ。不具合情報・アップデート・メンテナンス情報を掲載します。">
+  <link rel="canonical" href="https://healer-whale.github.io/tsukuyomu-web/news.html">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="お知らせ｜つく×よむ">
+  <meta property="og:description" content="短歌アプリ『つく×よむ』の不具合情報・アップデート・メンテナンス情報。">
+  <meta property="og:url" content="https://healer-whale.github.io/tsukuyomu-web/news.html">
+  <meta property="og:image" content="https://healer-whale.github.io/tsukuyomu-web/assets/icon.png">
+  <meta property="og:site_name" content="つく×よむ">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="assets/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="assets/icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html" aria-label="つく×よむ ホーム">
+        <img src="assets/icon.png" alt="つく×よむ">
+      </a>
+      <nav class="site-nav">
+        <a href="index.html#about">つく×よむについて</a>
+        <a href="news.html">お知らせ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="page-head">
+      <h1>お知らせ</h1>
+    </div>
+
+    <div class="page-body">
+      <div class="container">
+
+        <div class="news-list">
+          <article class="news-item">
+            <div class="news-item__meta">
+              <time datetime="2026-08-31">2026年8月31日</time>
+            </div>
+            <h3>公式サイトを公開しました</h3>
+            <p>『つく×よむ』の公式サイトを公開しました。</p>
+          </article>
+        </div>
+
+        <div class="center-link">
+          <a class="btn" href="index.html">トップへもどる</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <nav>
+      <a href="news.html">お知らせ</a>
+      <a href="privacy.html">プライバシーポリシー</a>
+      <a href="https://forms.gle/Nwhqb7th3zikU4kS8" target="_blank" rel="noopener">お問い合わせ</a>
+      <a href="https://apps.apple.com/jp/app/id6753803224" target="_blank" rel="noopener">App Store</a>
+    </nav>
+    <small>&copy; Kazuaki Sagara ｜ 短歌アプリ『つく×よむ』</small>
+  </footer>
+</body>
+</html>

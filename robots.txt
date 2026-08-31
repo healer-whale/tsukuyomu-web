@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://healer-whale.github.io/tsukuyomu-web/sitemap.xml
